@@ -1,14 +1,14 @@
 use std::collections::HashSet;
 
-pub fn is_unique(_s: String) -> bool {
-    let len = _s.len();
+pub fn is_unique(s: String) -> bool {
+    let len = s.len();
     if len > 128 {
         return false;
     }
 
     let mut chars = HashSet::new();
 
-    for c in _s.chars() {
+    for c in s.chars() {
         if chars.contains(&c) {
             return false;
         } else {
